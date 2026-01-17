@@ -5,121 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shailesh Kumar | Data Analyst Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .project-page { display: none; } /* Hidden by default */
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
     <nav class="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
         <span class="text-xl font-bold text-blue-600">Shailesh Kumar</span>
-        <div class="space-x-6 text-sm font-medium">
-            <a href="#about" class="hover:text-blue-600">About</a>
-            <a href="#skills" class="hover:text-blue-600">Skills</a>
-            <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <div class="hidden md:flex space-x-6 text-sm font-medium">
+            <a href="#home" onclick="showHome()" class="hover:text-blue-600">Home</a>
+            <a href="#about" onclick="showHome()" class="hover:text-blue-600">About</a>
+            <a href="#projects" onclick="showHome()" class="hover:text-blue-600">Projects</a>
             <a href="mailto:kumar.shailesh0705@gmail.com" class="text-blue-600 border border-blue-600 px-4 py-2 rounded-lg">Hire Me</a>
         </div>
     </nav>
 
-    <header class="text-center py-20 px-4 bg-gradient-to-b from-white to-slate-50">
-        <h1 class="text-5xl font-extrabold mb-4">Shailesh Kumar</h1>
-        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
-            B.Tech in AI & ML | Data Analyst specializing in transforming raw data into actionable insights.
-        </p>
-        <div class="mt-8 space-x-4">
-            <a href="https://github.com/KumarShailesh07" class="bg-slate-900 text-white px-6 py-3 rounded-lg font-bold">GitHub Portfolio</a>
-            <a href="https://www.linkedin.com/in/shailesh-kumar7" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold">LinkedIn</a>
-        </div>
-    </header>
+    <div id="main-content">
+        <header id="home" class="text-center py-20 px-4 bg-gradient-to-b from-white to-slate-50">
+            <img src="Shailesh Photo.jpg" alt="Shailesh Kumar" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-blue-100 shadow-lg">
+            
+            <h1 class="text-5xl font-extrabold mb-2">Shailesh Kumar</h1>
+            <p class="text-blue-600 font-bold mb-4 uppercase tracking-widest text-sm">Data Analyst | AI & ML Specialist</p>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
+                B.Tech student (Batch of 2027) [cite: 47, 63] transforming raw data into actionable insights through Python, SQL, and Power BI[cite: 20, 25, 57].
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="Shailesh Kumar Resume.pdf" download class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold flex items-center shadow-lg hover:bg-blue-700">
+                    <span class="mr-2">📥</span> Download Resume
+                </a>
+                <a href="https://github.com/KumarShailesh07" target="_blank" class="bg-slate-900 text-white px-6 py-3 rounded-lg font-bold flex items-center shadow-lg hover:bg-black">
+                    <span class="mr-2">📂</span> GitHub
+                </a>
+            </div>
+        </header>
 
-    <section id="about" class="max-w-6xl mx-auto py-16 px-4">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">About Me</h2>
-            <p class="text-slate-600 mb-4 text-lg">
-                I am a B.Tech student specializing in <strong>Artificial Intelligence and Machine Learning</strong>, dedicated to transforming complex datasets into actionable business insights. 
-            </p>
-            <p class="text-slate-600 mb-6">
-                During my tenure at <strong>NullClass</strong>, I focused on deep-dive EDA and interactive dashboarding, bridging the gap between raw data and strategic decision-making.
-            </p>
-            <div class="bg-blue-50 p-4 rounded-lg italic text-blue-800 border-left">
-                "I use machine learning to not just describe the past, but predict the future." 
-            </div>
-        </div>
-        <div class="space-y-4">
-            <div class="bg-white p-4 shadow-sm rounded-lg flex items-center">
-                <span class="text-2xl mr-4">🎓</span>
+        <section id="about" class="max-w-6xl mx-auto py-16 px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h4 class="font-bold">Education</h4>
-                    <p class="text-sm text-slate-500">B.Tech AI & ML (2023-2027)</p>
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">About Me</h2>
+                    <p class="text-slate-600 mb-4 text-lg">
+                        I am a B.Tech student specializing in <strong>Artificial Intelligence and Machine Learning</strong>[cite: 47, 63]. I bridge the gap between complex datasets and data-driven decision-making[cite: 24, 25].
+                    </p>
+                    <p class="text-slate-600 mb-6">
+                        During my internship at <strong>NullClass</strong> [cite: 42, 66, 67], I performed deep-dive EDA, data cleaning, and automated workflows to improve efficiency[cite: 69, 70, 73].
+                    </p>
+                    <div class="bg-blue-50 p-4 rounded-lg italic text-blue-800 border-l-4 border-blue-400">
+                        "I use machine learning to not just describe the past, but predict the future." [cite: 27]
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-white p-4 shadow-md rounded-lg flex items-center border-l-4 border-blue-500">
+                        <span class="text-2xl mr-4">🎓</span>
+                        <div>
+                            <h4 class="font-bold text-sm">Ganga Institute of Tech & Mgmt [cite: 46, 64]</h4>
+                            <p class="text-xs text-slate-500">Batch 2023 - 2027 [cite: 47]</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 shadow-md rounded-lg flex items-center border-l-4 border-green-500">
+                        <span class="text-2xl mr-4">💼</span>
+                        <div>
+                            <h4 class="font-bold text-sm">Data Analyst Intern</h4>
+                            <p class="text-xs text-slate-500">NullClass (April 2025 - May 2025) [cite: 68]</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 shadow-md rounded-lg flex items-center border-l-4 border-orange-500">
+                        <span class="text-2xl mr-4">🏆</span>
+                        <div>
+                            <h4 class="font-bold text-sm">Ultimate Engineer Project Competition</h4>
+                            <p class="text-xs text-slate-500">Secured 3rd Place [cite: 76]</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="bg-white p-4 shadow-sm rounded-lg flex items-center">
-                <span class="text-2xl mr-4">💼</span>
-                <div>
-                    <h4 class="font-bold">Recent Internship</h4>
-                    <p class="text-sm text-slate-500">Data Analyst at NullClass (2025)</p>
+        </section>
+
+        <section id="projects" class="bg-slate-100 py-16 px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-4 text-center">Featured Projects</h2>
+                <p class="text-center text-slate-500 mb-12">Click "View All" to see my full technical documentation.</p>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition border border-slate-200 group">
+                        <h3 class="text-xl font-bold text-blue-600 mb-2">Google Play Store Analytics [cite: 90]</h3>
+                        <p class="text-slate-600 mb-4 text-sm">In-depth analysis of app trends and key metrics using Python and EDA[cite: 91, 92].</p>
+                        <button onclick="showProjects()" class="text-blue-600 font-bold text-sm group-hover:underline">View Details →</button>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition border border-slate-200 group">
+                        <h3 class="text-xl font-bold text-blue-600 mb-2">Chocolate Sales Analysis [cite: 96]</h3>
+                        <p class="text-slate-600 mb-4 text-sm">Interactive visualizations using Plotly to explore region-wise trends[cite: 97, 98].</p>
+                        <button onclick="showProjects()" class="text-blue-600 font-bold text-sm group-hover:underline">View Details →</button>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <button onclick="showProjects()" class="bg-white border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-blue-600 hover:text-white transition shadow-md">
+                        View All Projects Portfolio
+                    </button>
                 </div>
             </div>
-            <div class="bg-white p-4 shadow-sm rounded-lg flex items-center">
-                <span class="text-2xl mr-4">🏆</span>
-                <div>
-                    <h4 class="font-bold">Key Achievement</h4>
-                    <p class="text-sm text-slate-500">Bhartiya Antariksh Hackathon 2025</p>
+        </section>
+    </div>
+
+    <div id="projects-page" class="project-page max-w-5xl mx-auto py-20 px-4">
+        <button onclick="showHome()" class="text-blue-600 font-bold mb-8 flex items-center">← Back to Home</button>
+        <h2 class="text-4xl font-black mb-12">Project Portfolio</h2>
+        
+        <div class="space-y-12">
+            <div class="border-b border-slate-200 pb-12">
+                <h3 class="text-2xl font-bold mb-4">Google Play Store Data Analytics [cite: 90]</h3>
+                <p class="text-slate-600 mb-4 text-lg font-light">Performed in-depth analysis to uncover trends and visualize insights supporting data-driven decisions in the mobile ecosystem[cite: 91, 92].</p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/KumarShailesh07" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded text-sm font-bold shadow-md hover:bg-blue-700">View Source Code on GitHub [cite: 88]</a>
+                </div>
+            </div>
+
+            <div class="border-b border-slate-200 pb-12">
+                <h3 class="text-2xl font-bold mb-4">Social Media Engagement Analysis [cite: 93]</h3>
+                <p class="text-slate-600 mb-4 text-lg font-light">Analyzed how platform, post type, and sentiment affect likes and shares using Python, Seaborn, and Matplotlib[cite: 94, 95].</p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/KumarShailesh07" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded text-sm font-bold shadow-md hover:bg-blue-700">View Source Code on GitHub [cite: 88]</a>
+                </div>
+            </div>
+
+            <div class="border-b border-slate-200 pb-12">
+                <h3 class="text-2xl font-bold mb-4">Chocolate Sales Analysis [cite: 96]</h3>
+                <p class="text-slate-600 mb-4 text-lg font-light">Developed interactive bar and pie charts with Plotly Express to automate monthly trend generation[cite: 97, 98, 99].</p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/KumarShailesh07" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded text-sm font-bold shadow-md hover:bg-blue-700">View Source Code on GitHub [cite: 88]</a>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
-    <section id="skills" class="max-w-6xl mx-auto py-16 px-4 text-center">
-        <h2 class="text-3xl font-bold mb-12">Technical Toolkit</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="p-6 bg-white rounded-xl shadow-sm border-b-4 border-blue-500 hover:scale-105 transition">
-                <h3 class="font-bold">Languages</h3>
-                <p class="text-slate-500">Python, SQL Server</p>
-            </div>
-            <div class="p-6 bg-white rounded-xl shadow-sm border-b-4 border-green-500 hover:scale-105 transition">
-                <h3 class="font-bold">Data Viz</h3>
-                <p class="text-slate-500">Power BI, Plotly</p>
-            </div>
-            <div class="p-6 bg-white rounded-xl shadow-sm border-b-4 border-purple-500 hover:scale-105 transition">
-                <h3 class="font-bold">Libraries</h3>
-                <p class="text-slate-500">Pandas, NumPy, Scikit-Learn</p>
-            </div>
-            <div class="p-6 bg-white rounded-xl shadow-sm border-b-4 border-orange-500 hover:scale-105 transition">
-                <h3 class="font-bold">Excel</h3>
-                <p class="text-slate-500">Power Query, Macros</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="bg-slate-100 py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200">
-                    <h3 class="text-xl font-bold text-blue-600 mb-2">Google Play Store Analytics</h3>
-                    <p class="text-slate-600 mb-4">Deep-dive EDA and real-time data analytics using Python.</p>
-                    <div class="flex flex-wrap gap-2 text-xs font-semibold">
-                        <span class="bg-slate-100 px-3 py-1 rounded">Python</span>
-                        <span class="bg-slate-100 px-3 py-1 rounded">EDA</span>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200">
-                    <h3 class="text-xl font-bold text-blue-600 mb-2">Vrinda Store Sales Analysis</h3>
-                    <p class="text-slate-600 mb-4">Advanced Excel dashboard identifying growth drivers and trends.</p>
-                    <div class="flex flex-wrap gap-2 text-xs font-semibold">
-                        <span class="bg-slate-100 px-3 py-1 rounded">Power Query</span>
-                        <span class="bg-slate-100 px-3 py-1 rounded">Excel</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 text-center bg-white">
-        <p class="text-slate-500 mb-4">Interested in collaboration? Let's talk.</p>
-        <p class="text-xl font-bold mb-6">kumar.shailesh0705@gmail.com</p>
-        <p class="text-sm text-slate-400">© 2026 Shailesh Kumar | B.Tech Batch 2027</p>
+    <footer class="py-12 text-center bg-white border-t border-slate-100">
+        <p class="text-slate-500 mb-2">kumar.shailesh0705@gmail.com [cite: 51]</p>
+        <p class="text-xs text-slate-400">© 2026 Shailesh Kumar | B.Tech Artificial Intelligence and Machine Learning [cite: 47, 63]</p>
     </footer>
 
+    <script>
+        function showProjects() {
+            document.getElementById('main-content').style.display = 'none';
+            document.getElementById('projects-page').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+        function showHome() {
+            document.getElementById('main-content').style.display = 'block';
+            document.getElementById('projects-page').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
