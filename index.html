@@ -11,20 +11,26 @@
             darkMode: 'class',
             theme: {
                 extend: {
-                    colors: {
-                        primary: '#2563eb',
-                    }
+                    colors: { primary: '#2563eb' }
                 }
             }
         }
     </script>
     <style>
         html { scroll-behavior: smooth; }
-        /* Gallery Hidden by Default */
         #project-gallery { display: none; }
         .btn-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4); }
-        .social-icon { transition: all 0.3s ease; }
-        .social-icon:hover { transform: scale(1.2); color: #2563eb; }
+        /* Interactive Card Styling */
+        .interactive-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .interactive-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            border-color: #2563eb;
+        }
+        .dark .interactive-card { border-color: rgba(255,255,255,0.1); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
@@ -51,8 +57,8 @@
                  onerror="this.src='https://ui-avatars.com/api/?name=Shailesh+Kumar&background=2563eb&color=fff&size=128'"
                  class="w-40 h-40 rounded-full mx-auto mb-8 object-cover border-4 border-primary shadow-2xl">
             
-            <h1 class="text-5xl md:text-7xl font-black mb-4">Shailesh Kumar</h1>
-            <p class="text-lg text-primary font-bold mb-10 tracking-widest uppercase">Data Analyst | AI & ML Specialist</p>
+            <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tight">Shailesh Kumar</h1>
+            <p class="text-lg text-primary font-bold mb-10 tracking-widest uppercase italic">Turning Raw Data into Strategic Decisions</p>
             
             <div class="flex flex-wrap justify-center gap-6">
                 <a href="Shailesh Kumar Resume.pdf" download class="btn-hover bg-primary text-white px-8 py-4 rounded-xl font-bold flex items-center transition">
@@ -70,57 +76,50 @@
         <section id="about" class="max-w-6xl mx-auto py-16 px-6">
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="space-y-6">
-                    <h2 class="text-3xl font-black mb-6">Professional Summary</h2>
+                    <h2 class="text-3xl font-black border-l-4 border-primary pl-4">Data Analyst Persona</h2>
                     <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
-                        Results-driven <strong>Data Analyst</strong> specializing in AI & ML. Expertise in converting complex datasets into actionable business intelligence through Python, SQL, Advance Excel and Power BI.
-                    </p>
-                    <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 border-l-4 border-l-orange-500">
-                        <span class="text-orange-500 font-bold text-xs uppercase tracking-widest">Achievement</span>
-                        <h4 class="text-xl font-black mt-1">3rd Place</h4>
-                        <p class="text-slate-500 text-sm italic">Ultimate Engineer Project Competition</p>
+                        Results-driven <strong>Data Analyst</strong> specializing in AI & ML. Expertise in converting complex datasets into actionable business intelligence through Python, SQL, and Power BI.
+                    <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 border-l-4 border-l-orange-500 interactive-card">
+                        <span class="text-orange-500 font-bold text-xs uppercase tracking-widest">Award Winning Analyst</span>
+                        <h4 class="text-xl font-black mt-1">3rd Place - Ultimate Engineer</h4>
+                        <p class="text-slate-500 text-sm">Recognized for excellence in technical problem solving.</p>
                     </div>
                 </div>
-                <div class="flex flex-col justify-center">
-                    <div class="p-8 bg-primary text-white rounded-3xl shadow-xl">
-                        <span class="font-bold text-xs uppercase tracking-widest opacity-80">Work Experience</span>
-                        <h4 class="text-2xl font-black mt-2">Data Analyst Intern</h4>
-                        <p class="mt-1 font-bold">NullClass (April 2025 - May 2025)</p>
-                        <ul class="mt-4 space-y-2 text-sm opacity-90 list-disc list-inside">
-                            <li>Exploratory Data Analysis (EDA)</li>
-                            <li>Automated Data Cleaning Workflows</li>
-                            <li>Interactive Visualization Dashboards</li>
-                        </ul>
-                    </div>
+                <div class="p-8 bg-primary text-white rounded-3xl shadow-xl flex flex-col justify-center">
+                    <span class="font-bold text-xs uppercase tracking-widest opacity-80 italic underline decoration-white underline-offset-4">Professional Milestone</span>
+                    <h4 class="text-2xl font-black mt-4 uppercase">Data Analyst Intern</h4>
+                    <p class="text-lg opacity-90">NullClass | April 2025 - May 2025</p>
+                    <p class="mt-4 text-sm font-medium leading-relaxed italic">
+                        "Successfully automated data cleaning pipelines and conducted deep-dive EDA for real-world datasets."
+                    </p>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="bg-slate-100 dark:bg-slate-900 py-20 px-6">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-black mb-12 text-center">Technical Toolkit</h2>
+                <h2 class="text-3xl font-black mb-12 text-center">Analytic Infrastructure</h2>
                 <div class="grid grid-cols-2 lg:grid-cols-5 gap-6">
-                    <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl text-center shadow-sm">
+                    <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl text-center shadow-sm interactive-card">
                         <i class="fab fa-python text-3xl text-blue-500 mb-3"></i>
                         <h5 class="font-bold text-sm">Python</h5>
                     </div>
-                    <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl text-center shadow-sm">
-                        <i class="fas fa-brain text-3xl text-green-500 mb-3"></i>
+                    <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl text-center shadow-sm interactive-card">
+                        <i class="fas fa-layer-group text-3xl text-green-500 mb-3"></i>
                         <h5 class="font-bold text-sm">Libraries</h5>
-                        <p class="text-[10px] text-slate-400">Pandas, NumPy, Scikit</p>
+                        <p class="text-[10px] text-slate-400">Pandas, Scikit-Learn</p>
                     </div>
-                    <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl text-center shadow-sm">
+                    <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl text-center shadow-sm interactive-card">
                         <i class="fas fa-database text-3xl text-orange-500 mb-3"></i>
                         <h5 class="font-bold text-sm">SQL Server</h5>
                     </div>
-                    <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl text-center shadow-sm">
-                        <i class="fas fa-chart-pie text-3xl text-purple-500 mb-3"></i>
-                        <h5 class="font-bold text-sm">Data Viz</h5>
-                        <p class="text-[10px] text-slate-400">Power BI, Plotly</p>
+                    <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl text-center shadow-sm interactive-card">
+                        <i class="fas fa-chart-area text-3xl text-purple-500 mb-3"></i>
+                        <h5 class="font-bold text-sm">Power BI</h5>
                     </div>
-                    <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl text-center shadow-sm">
-                        <i class="fas fa-file-excel text-3xl text-red-500 mb-3"></i>
-                        <h5 class="font-bold text-sm">Excel</h5>
-                        <p class="text-[10px] text-slate-400">Power Query, Macros</p>
+                    <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl text-center shadow-sm interactive-card">
+                        <i class="fas fa-table text-3xl text-red-500 mb-3"></i>
+                        <h5 class="font-bold text-sm">Adv. Excel</h5>
                     </div>
                 </div>
             </div>
@@ -128,72 +127,78 @@
 
         <section id="projects" class="py-20 px-6 bg-white dark:bg-slate-950">
             <div class="max-w-6xl mx-auto text-center">
-                <h2 class="text-3xl font-black mb-12">Featured Insights</h2>
+                <h2 class="text-4xl font-black mb-4">Strategic Case Studies</h2>
+                <p class="text-slate-500 mb-16 italic">High-impact projects demonstrating data-driven growth</p>
+                
                 <div class="grid md:grid-cols-2 gap-10 text-left">
-                    <div class="p-8 bg-slate-50 dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800">
-                        <h3 class="text-2xl font-bold text-primary mb-4">Google Play Store Analysis</h3>
-                        <p class="text-slate-500 mb-6 text-sm">Uncovering market trends and app performance metrics using Python EDA.</p>
-                        <a href="https://github.com/KumarShailesh07/Google-Play-Store-Data-Analytics" target="_blank" class="font-black text-sm uppercase tracking-wider text-primary">GitHub →</a>
+                    <div class="p-10 bg-slate-50 dark:bg-slate-900 rounded-[2rem] border-2 border-transparent hover:border-primary interactive-card group">
+                        <span class="text-xs font-bold text-primary uppercase tracking-widest">Python & Analytics</span>
+                        <h3 class="text-3xl font-black mt-2 mb-4 group-hover:text-primary transition">Google Play Store Intelligence</h3>
+                        <p class="text-slate-500 mb-8 leading-relaxed">Advanced EDA uncovering market saturation and rating patterns to guide developer strategies.</p>
+                        <a href="https://github.com/KumarShailesh07/Google-Play-Store-Data-Analytics" target="_blank" class="bg-primary text-white px-6 py-2 rounded-lg font-bold text-sm inline-block">View Research</a>
                     </div>
-                    <div class="p-8 bg-slate-50 dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800">
-                        <h3 class="text-2xl font-bold text-primary mb-4">Vrinda Store Analysis</h3>
-                        <p class="text-slate-500 mb-6 text-sm">Sales forecasting and customer segmentation through Advanced Excel.</p>
-                        <a href="https://github.com/KumarShailesh07/Vrinda-Store-Analysis" target="_blank" class="font-black text-sm uppercase tracking-wider text-primary">GitHub →</a>
+                    <div class="p-10 bg-slate-50 dark:bg-slate-900 rounded-[2rem] border-2 border-transparent hover:border-primary interactive-card group">
+                        <span class="text-xs font-bold text-primary uppercase tracking-widest">Business Intelligence</span>
+                        <h3 class="text-3xl font-black mt-2 mb-4 group-hover:text-primary transition">Vrinda Store Performance</h3>
+                        <p class="text-slate-500 mb-8 leading-relaxed">Conversion funnel analysis and customer segmentation to optimize supply chain efficiency.</p>
+                        <a href="https://github.com/KumarShailesh07/Vrinda-Store-Analysis" target="_blank" class="bg-primary text-white px-6 py-2 rounded-lg font-bold text-sm inline-block">View Dashboard</a>
                     </div>
                 </div>
-                <button onclick="openGallery()" class="mt-16 bg-slate-900 dark:bg-primary text-white px-10 py-4 rounded-full font-black shadow-2xl hover:scale-105 transition">
-                    View Project Gallery
+                
+                <button onclick="openGallery()" class="mt-20 bg-slate-900 dark:bg-primary text-white px-12 py-5 rounded-full font-black shadow-2xl hover:scale-110 transition active:scale-95 flex items-center mx-auto">
+                    Explore All Project Assets <i class="fas fa-arrow-right ml-3"></i>
                 </button>
             </div>
         </section>
     </div>
 
     <div id="project-gallery" class="max-w-6xl mx-auto py-20 px-6">
-        <button onclick="showHome()" class="text-primary font-bold mb-10 flex items-center hover:-translate-x-2 transition">
-            <i class="fas fa-arrow-left mr-2"></i> Back to Home
+        <button onclick="showHome()" class="text-primary font-black mb-12 flex items-center group">
+            <i class="fas fa-chevron-left mr-2 group-hover:-translate-x-2 transition"></i> BACK TO HOME
         </button>
+        <h2 class="text-5xl font-black mb-16 underline decoration-primary decoration-8 underline-offset-8 uppercase">Project Gallery</h2>
+        
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow-md border border-slate-100 dark:border-slate-800">
-                <h4 class="font-bold mb-2">HR Analytics Dashboard</h4>
-                <p class="text-xs text-slate-400 mb-4 uppercase">Excel Insights</p>
-                <a href="https://github.com/KumarShailesh07/HR-Analytics-Dashboard" target="_blank" class="text-primary text-xs font-black">SOURCE CODE</a>
+            <div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-md interactive-card">
+                <h4 class="font-bold text-xl mb-2">Google Play Store Intelligence</h4>
+                <p class="text-xs text-primary font-bold mb-4 uppercase">Python | EDA</p>
+                <a href="https://github.com/KumarShailesh07/Google-Play-Store-Data-Analytics" target="_blank" class="text-slate-400 hover:text-primary font-black text-xs tracking-tighter">SOURCE CODE →</a>
             </div>
-            <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow-md border border-slate-100 dark:border-slate-800">
-                <h4 class="font-bold mb-2">Call Center Performance</h4>
-                <p class="text-xs text-slate-400 mb-4 uppercase">Advanced Excel</p>
-                <a href="https://github.com/KumarShailesh07/Call-Center-Performance-Analysis-Dashboard" target="_blank" class="text-primary text-xs font-black">SOURCE CODE</a>
+            <div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-md interactive-card">
+                <h4 class="font-bold text-xl mb-2">Vrinda Store Performance</h4>
+                <p class="text-xs text-primary font-bold mb-4 uppercase">Excel | Dashboards</p>
+                <a href="https://github.com/KumarShailesh07/Vrinda-Store-Analysis" target="_blank" class="text-slate-400 hover:text-primary font-black text-xs tracking-tighter">SOURCE CODE →</a>
             </div>
-            <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow-md border border-slate-100 dark:border-slate-800">
-                <h4 class="font-bold mb-2">Sales Analysis</h4>
-                <p class="text-xs text-slate-400 mb-4 uppercase">Python | Time-Series</p>
-                <a href="https://github.com/KumarShailesh07/Sales-Analysis" target="_blank" class="text-primary text-xs font-black">SOURCE CODE</a>
+            <div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-md interactive-card">
+                <h4 class="font-bold text-xl mb-2">HR Analytics Dashboard</h4>
+                <p class="text-xs text-primary font-bold mb-4 uppercase">Excel | HR Management</p>
+                <a href="https://github.com/KumarShailesh07/HR-Analytics-Dashboard" target="_blank" class="text-slate-400 hover:text-primary font-black text-xs tracking-tighter">SOURCE CODE →</a>
             </div>
-            <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow-md border border-slate-100 dark:border-slate-800">
-                <h4 class="font-bold mb-2">Social Media Engagement</h4>
-                <p class="text-xs text-slate-400 mb-4 uppercase">Python | Seaborn</p>
-                <a href="https://github.com/KumarShailesh07/Social-Media-Engagement" target="_blank" class="text-primary text-xs font-black">SOURCE CODE</a>
+            <div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-md interactive-card">
+                <h4 class="font-bold text-xl mb-2">Call Center Ops</h4>
+                <p class="text-xs text-primary font-bold mb-4 uppercase">Advanced Excel</p>
+                <a href="https://github.com/KumarShailesh07/Call-Center-Performance-Analysis-Dashboard" target="_blank" class="text-slate-400 hover:text-primary font-black text-xs tracking-tighter">SOURCE CODE →</a>
             </div>
-            <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow-md border border-slate-100 dark:border-slate-800">
-                <h4 class="font-bold mb-2">Chocolate Sales Analysis</h4>
-                <p class="text-xs text-slate-400 mb-4 uppercase">Python | Plotly</p>
-                <a href="https://github.com/KumarShailesh07/Chocolate-Sales-Analysis" target="_blank" class="text-primary text-xs font-black">SOURCE CODE</a>
+            <div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-md interactive-card">
+                <h4 class="font-bold text-xl mb-2">Sales Analysis</h4>
+                <p class="text-xs text-primary font-bold mb-4 uppercase">Python | Time-Series</p>
+                <a href="https://github.com/KumarShailesh07/Sales-Analysis" target="_blank" class="text-slate-400 hover:text-primary font-black text-xs tracking-tighter">SOURCE CODE →</a>
+            </div>
+            <div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-md interactive-card">
+                <h4 class="font-bold text-xl mb-2">Chocolate Sales Analysis</h4>
+                <p class="text-xs text-primary font-bold mb-4 uppercase">Python | Plotly</p>
+                <a href="https://github.com/KumarShailesh07/Chocolate-Sales-Analysis" target="_blank" class="text-slate-400 hover:text-primary font-black text-xs tracking-tighter">SOURCE CODE →</a>
             </div>
         </div>
     </div>
 
     <footer class="py-16 text-center bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
-        <div class="flex justify-center space-x-8 mb-8">
-            <a href="mailto:kumar.shailesh0705@gmail.com" class="social-icon text-2xl text-slate-600 dark:text-slate-400">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://github.com/KumarShailesh07" target="_blank" class="social-icon text-2xl text-slate-600 dark:text-slate-400">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/shailesh-kumar7" target="_blank" class="social-icon text-2xl text-slate-600 dark:text-slate-400">
-                <i class="fab fa-linkedin"></i>
-            </a>
+        <div class="flex justify-center space-x-12 mb-10">
+            <a href="mailto:kumar.shailesh0705@gmail.com" class="text-3xl text-slate-400 hover:text-primary transition transform hover:scale-125"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/KumarShailesh07" target="_blank" class="text-3xl text-slate-400 hover:text-primary transition transform hover:scale-125"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/shailesh-kumar7" target="_blank" class="text-3xl text-slate-400 hover:text-primary transition transform hover:scale-125"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p class="text-slate-400 text-xs tracking-widest uppercase">© 2026 Shailesh Kumar | Driven by Data</p>
+        <p class="text-slate-400 text-xs tracking-[0.3em] font-bold">© 2026 SHAILESH KUMAR | DATA ANALYST</p>
     </footer>
 
     <script>
