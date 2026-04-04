@@ -6,6 +6,7 @@
     <title>Shailesh Kumar | Data Analyst Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -16,27 +17,36 @@
             }
         }
     </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        #project-gallery { display: none; }
+        .btn-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4); }
+
+        .interactive-card {
+            transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(10px);
+        }
+        .interactive-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(37,99,235,0.2);
+            border-color:#2563eb;
+        }
+    </style>
 </head>
 
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
 
-<!-- NAVBAR SAME -->
+<!-- NAVBAR -->
 <nav class="p-5 flex justify-between items-center bg-white/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0">
     <span class="text-2xl font-black text-primary">SK.</span>
-    <div class="hidden md:flex space-x-8 text-sm font-bold uppercase">
-        <a href="#home">Home</a>
-        <a href="#about">Profile</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-    </div>
 </nav>
 
 <!-- HEADER -->
 <header class="text-center py-20 px-6">
     <img src="Shailesh Photo.JPG" class="w-40 h-40 rounded-full mx-auto border-4 border-primary mb-6">
-    
     <h1 class="text-5xl font-black">Shailesh Kumar</h1>
-    
     <p class="text-primary font-bold mt-3">
         Data Analyst | SQL | Python | Power BI | Advanced Excel
     </p>
@@ -47,13 +57,13 @@
     <h2 class="text-3xl font-black mb-4">About Me</h2>
 
     <p class="text-lg text-slate-600">
-        Data Analyst skilled in SQL, Python, Power BI, and Advanced Excel, focused on solving real business problems through data.
+        Results-driven Data Analyst with hands-on experience in SQL, Python, Power BI, and Advanced Excel, focused on transforming data into actionable business insights.
     </p>
 
     <p class="text-sm text-slate-500 mt-4">
-        Built projects including <b>Superstore Sales Analysis ($2.3M+ revenue)</b> identifying 
+        Built real-world projects including <b>Superstore Sales Analysis ($2.3M+ revenue)</b> identifying 
         <b>18.7% loss-making orders</b>, and <b>Insurance BI Dashboard</b> uncovering 
-        <b>41.89% inactive policies</b> and customer sentiment issues.
+        <b>41.89% inactive policies</b> and customer sentiment insights.
     </p>
 </section>
 
@@ -88,27 +98,25 @@
 
 <!-- PROJECTS -->
 <section class="py-20 px-6 max-w-6xl mx-auto">
-
     <h2 class="text-3xl font-black text-center mb-12">Projects</h2>
 
     <div class="grid md:grid-cols-2 gap-10">
 
         <div class="p-8 bg-white dark:bg-slate-800 rounded-xl">
-            <h3 class="text-xl font-bold mb-2">Superstore Sales Analysis</h3>
+            <h3 class="text-xl font-bold mb-2">Superstore Sales & Profitability Analysis</h3>
             <p class="text-sm text-slate-500">
-                Analyzed $2.3M+ sales data and identified 18.7% loss-making orders caused by high discounts.
+                Analyzed $2.3M+ sales data and identified 18.7% loss-making orders caused by high discounts and low-margin products.
             </p>
         </div>
 
         <div class="p-8 bg-white dark:bg-slate-800 rounded-xl">
-            <h3 class="text-xl font-bold mb-2">Insurance BI Dashboard</h3>
+            <h3 class="text-xl font-bold mb-2">Prism Insurance BI Dashboard</h3>
             <p class="text-sm text-slate-500">
-                Built BI dashboard identifying 41.89% inactive policies and customer sentiment insights.
+                Built BI dashboard integrating SQL, Excel, and Python (NLP) to identify 41.89% inactive policies and customer sentiment insights.
             </p>
         </div>
 
     </div>
-
 </section>
 
 <!-- FOOTER -->
